@@ -104,7 +104,7 @@ if (typeof executed === 'undefined') {
     sparxsstext.style.textAlign = "center";
     sparxsstext.style.color = "#aaa"; 
     sparxsstext.style.fontWeight = "bold"; 
-    sparxsstext.innerText = "SparXSS";
+    sparxsstext.innerText = "EASS";
 
     var invis2 = document.createElement("div");
     invis2.style.position = "fixed";
