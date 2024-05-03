@@ -289,34 +289,34 @@ if (typeof executed === 'undefined') {
         }
     });
 
-    var button2 = document.createElement("button");
-    button2.innerText = "Custom Links";
-    button2.style.cursor = 'pointer';
-    button2.style.width = '30vw';
-    button2.style.backgroundColor = '#333';
-    button2.style.border = 'none';
-    button2.style.padding = '10px 10px';
-    button2.style.fontSize = '20px';
-    button2.style.borderRadius = '10px';
-    button2.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
-    button2.style.transition = 'background-color 0.3s ease';
-    button2.style.color = '#aaa';
-    button2.style.margin = '10px auto'; 
-    button2.style.display = 'block'; 
-    button2.style.textAlign = 'center'; 
-    button2.style.outline = 'none';
+    // var button2 = document.createElement("button");
+    // button2.innerText = "Custom Links";
+    // button2.style.cursor = 'pointer';
+    // button2.style.width = '30vw';
+    // button2.style.backgroundColor = '#333';
+    // button2.style.border = 'none';
+    // button2.style.padding = '10px 10px';
+    // button2.style.fontSize = '20px';
+    // button2.style.borderRadius = '10px';
+    // button2.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
+    // button2.style.transition = 'background-color 0.3s ease';
+    // button2.style.color = '#aaa';
+    // button2.style.margin = '10px auto'; 
+    // button2.style.display = 'block'; 
+    // button2.style.textAlign = 'center'; 
+    // button2.style.outline = 'none';
 
-    button2.addEventListener('mouseover', function() {
-        button2.style.backgroundColor = '#444';
-    });
+    // button2.addEventListener('mouseover', function() {
+    //     button2.style.backgroundColor = '#444';
+    // });
 
-    button2.addEventListener('mouseout', function() {
-        button2.style.backgroundColor = '#333';
-    });
+    // button2.addEventListener('mouseout', function() {
+    //     button2.style.backgroundColor = '#333';
+    // });
 
-    button2.addEventListener('click', function() {
-        backgroundDiv2.style.display = '';
-    });
+    // button2.addEventListener('click', function() {
+    //     backgroundDiv2.style.display = '';
+    // });
 
     var button3 = document.createElement("button");
     button3.innerText = "PowerSchool";
