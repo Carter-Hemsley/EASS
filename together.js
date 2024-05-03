@@ -104,7 +104,7 @@ if (typeof executed === 'undefined') {
     interstellar.innerText = 'Google';
     interstellar.style.position = 'fixed';
     interstellar.style.top = '10px';
-    interstellar.style.left = '10px';
+    interstellar.style.right = '10px';
     interstellar.style.width = '100px';
     interstellar.style.backgroundColor = '#333';
     interstellar.style.border = 'none';
