@@ -319,7 +319,7 @@ if (typeof executed === 'undefined') {
     });
 
     var button3 = document.createElement("button");
-    button3.innerText = "Javascript";
+    button3.innerText = "PowerSchool";
     button3.style.cursor = 'pointer';
     button3.style.width = '10vw';
     button3.style.backgroundColor = '#333';
@@ -346,7 +346,7 @@ if (typeof executed === 'undefined') {
     });
 
     button3.addEventListener('click', function() {
-        backgroundDiv.style.display = 'block';
+       window.open("https://powerschool.fcusd.org/guardian/home.html?_userTypeHint=student", '_blank');;
     });
 
     // start of javascript execution elements
