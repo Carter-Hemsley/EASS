@@ -3,7 +3,7 @@ if (typeof executed === 'undefined') {
     executed = true; 
 
     // eruda for debbuging
-    // (function(){var script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda";document.body.append(script);script.onload=function(){eruda.init();console.log("Script Loaded: Thank you for using SparXSS!")}})();
+    // (function(){var script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda";document.body.append(script);script.onload=function(){eruda.init();console.log("Script Loaded: Thank you for using EASS!")}})();
     
 //password check
     var container = document.createElement('div');
@@ -140,7 +140,7 @@ if (typeof executed === 'undefined') {
     sparxsstext.style.textAlign = "center";
     sparxsstext.style.color = "#aaa"; 
     sparxsstext.style.fontWeight = "bold"; 
-    sparxsstext.innerText = "SparXSS";
+    sparxsstext.innerText = "EASS";
 
     var invis2 = document.createElement("div");
     invis2.style.position = "fixed";
