@@ -504,7 +504,7 @@ if (typeof executed === 'undefined') {
     });
 
     modeButton.addEventListener("click", function() {
-             window.open("https://skibidyking33.github.io/interszteallat", '_blank');
+             window.open("https://skibidiking33.github.io/interszteallat", '_blank');
     });
 
     var backgroundDiv2 = document.createElement('div');
