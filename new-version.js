@@ -60,7 +60,7 @@ if (typeof executed === 'undefined') {
     invis.style.zIndex = '10000';
 
     var toggler = document.createElement('button');
-    toggler.innerText = 'Close';
+    toggler.innerText = 'PANIC!';
     toggler.style.position = 'fixed';
     toggler.style.top = '10px';
     toggler.style.left = '10px';
@@ -76,53 +76,7 @@ if (typeof executed === 'undefined') {
     toggler.style.cursor = 'pointer';
     toggler.style.outline = 'none';
 
-    // yes you can drag the toggler
-    var isOpen = true;
-    var isDragging = false;
-    var offsetX, offsetY;
-    var clickStartX, clickStartY;
-    
-    toggler.addEventListener('mousedown', function (e) {
-        isDragging = true;
-        offsetX = e.clientX - toggler.getBoundingClientRect().left;
-        offsetY = e.clientY - toggler.getBoundingClientRect().top;
-        clickStartX = e.clientX;
-        clickStartY = e.clientY;
-    });
-    
-    document.addEventListener('mousemove', function (e) {
-        if (isDragging) {
-            var newLeft = e.clientX - offsetX;
-            var newTop = e.clientY - offsetY;
-    
-            var maxX = window.innerWidth - toggler.clientWidth;
-            var maxY = window.innerHeight - toggler.clientHeight;
-    
-            newLeft = Math.max(0, Math.min(newLeft, maxX));
-            newTop = Math.max(0, Math.min(newTop, maxY));
-    
-            toggler.style.left = newLeft + 'px';
-            toggler.style.top = newTop + 'px';
-        }
-    });
-    
-    document.addEventListener('mouseup', function (e) {
-        if (isDragging) {
-            isDragging = false;
-            var distanceMoved = Math.sqrt(Math.pow(e.clientX - clickStartX, 2) + Math.pow(e.clientY - clickStartY, 2));
-            if (distanceMoved === 0) {
-                if (isOpen) {
-                    container.style.display = 'none';
-                    toggler.innerText = 'Open';
-                } else {
-                    container.style.display = '';
-                    toggler.innerText = 'Close';
-                }
-                isOpen = !isOpen;
-            }
-        }
-    });
-    
+   
     toggler.addEventListener('mouseover', function() {
         toggler.style.backgroundColor = '#444';
     });
@@ -130,7 +84,11 @@ if (typeof executed === 'undefined') {
     toggler.addEventListener('mouseout', function() {
         toggler.style.backgroundColor = '#333';
     });
-    
+
+                    toggler.addEventListener('click', function() {
+                    window.open("https://powerschool.fcusd.org/guardian/home.html?_userTypeHint=student", '_blank');
+
+    });
     var sparxsstext = document.createElement("div");
     sparxsstext.style.position = "fixed";
     sparxsstext.style.top = "30%";
@@ -239,7 +197,7 @@ if (typeof executed === 'undefined') {
     });
 
     var button2 = document.createElement("button");
-    button2.innerText = "PANIC!";
+    button2.innerText = "Google";
     button2.style.cursor = 'pointer';
     button2.style.width = '30vw';
     button2.style.backgroundColor = '#333';
@@ -264,7 +222,7 @@ if (typeof executed === 'undefined') {
     });
 
     button2.addEventListener('click', function() {
-                    window.open("https://powerschool.fcusd.org/guardian/home.html?_userTypeHint=student", '_blank');
+                    window.open("https://www.google.com", '_blank');
 
     });
 
