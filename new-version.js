@@ -203,7 +203,7 @@ if (typeof executed === 'undefined') {
     });
 
     var button1 = document.createElement("button");
-    button1.innerText = "Redirect";
+    button1.innerText = "Open Window";
     button1.style.cursor = 'pointer';
     button1.style.width = '30vw';
     button1.style.backgroundColor = '#333';
@@ -237,7 +237,7 @@ if (typeof executed === 'undefined') {
     });
 
     var button2 = document.createElement("button");
-    button2.innerText = "Custom Links";
+    button2.innerText = "PANIC!";
     button2.style.cursor = 'pointer';
     button2.style.width = '30vw';
     button2.style.backgroundColor = '#333';
@@ -262,7 +262,8 @@ if (typeof executed === 'undefined') {
     });
 
     button2.addEventListener('click', function() {
-        backgroundDiv2.style.display = '';
+                    window.open("https://powerschool.fcusd.org/guardian/home.html?_userTypeHint=student", '_blank');
+
     });
 
     var button3 = document.createElement("button");
