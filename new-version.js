@@ -60,7 +60,7 @@ if (typeof executed === 'undefined') {
     invis.style.zIndex = '10000';
 
     var toggler = document.createElement('button');
-    toggler.innerText = 'PANIC!';
+    toggler.innerText = 'PANIC!(PowerSchool)';
     toggler.style.position = 'fixed';
     toggler.style.top = '10px';
     toggler.style.left = '10px';
@@ -227,7 +227,7 @@ if (typeof executed === 'undefined') {
     });
 
     var button3 = document.createElement("button");
-    button3.innerText = "Javascript";
+    button3.innerText = "PANIC(Google Classroom";
     button3.style.cursor = 'pointer';
     button3.style.width = '10vw';
     button3.style.backgroundColor = '#333';
@@ -254,7 +254,8 @@ if (typeof executed === 'undefined') {
     });
 
     button3.addEventListener('click', function() {
-        backgroundDiv.style.display = 'block';
+                window.open("https://classroom.google.com/h", '_blank');
+
     });
 
     // start of javascript execution elements
