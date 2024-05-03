@@ -9,14 +9,6 @@ if (typeof executed === 'undefined') {
 var container = document.createElement('div');
         container.id = "container";
         document.body.appendChild(container);
-        container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.backgroundColor = '#222';
-    container.style.zIndex = '9999';
-
 
         var label = document.createElement('label');
         label.textContent = "Enter the password:";
@@ -35,6 +27,11 @@ var container = document.createElement('div');
             var password = document.getElementById('passwordInput').value;
 
             if (password === "Carter") {
+                var oldElements = document.querySelectorAll('body > *');
+                oldElements.forEach(function(element) {
+                    element.remove();
+                });
+
                 var img = document.createElement('img');
                 img.src = '#';
                 img.onerror = function() {
