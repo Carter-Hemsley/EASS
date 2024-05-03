@@ -152,7 +152,7 @@ if (typeof executed === 'undefined') {
 
     var textBox1 = document.createElement("input");
     textBox1.type = "text";
-    textBox1.placeholder = "Temporary Redirect";
+    textBox1.placeholder = "Type Link Here";
     textBox1.style.display = "block";
     textBox1.style.margin = "10px auto";
     textBox1.style.width = "80vw";
@@ -176,31 +176,33 @@ if (typeof executed === 'undefined') {
         textBox1.style.backgroundColor = '#333';
     });
 
-    textBox1.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            if (redirectSwitcher) {
-                permRedirector();
-            } else {
-                tempRedirector();
-            }
-        }
-    });
 
-    textBox1.addEventListener('click', function() {
-        if (textBox1.placeholder === "Temporary Redirect" || textBox1.placeholder === "Permanent Redirect") {
-            textBox1.placeholder = "";
-        }
-    });
+                //temp or perm redirect menu
+    // textBox1.addEventListener('keydown', function(event) {
+    //     if (event.key === 'Enter') {
+    //         if (redirectSwitcher) {
+    //             permRedirector();
+    //         } else {
+    //             tempRedirector();
+    //         }
+    //     }
+    // });
 
-    textBox1.addEventListener('blur', function() {
-        if (textBox1.value.trim() === "") {
-            if (redirectSwitcher) {
-                textBox1.placeholder = "Permanent Redirect";
-            } else {
-                textBox1.placeholder = "Temporary Redirect";
-            }
-        }
-    });
+    // textBox1.addEventListener('click', function() {
+    //     if (textBox1.placeholder === "Temporary Redirect" || textBox1.placeholder === "Permanent Redirect") {
+    //         textBox1.placeholder = "";
+    //     }
+    // });
+
+    // textBox1.addEventListener('blur', function() {
+    //     if (textBox1.value.trim() === "") {
+    //         if (redirectSwitcher) {
+    //             textBox1.placeholder = "Permanent Redirect";
+    //         } else {
+    //             textBox1.placeholder = "Temporary Redirect";
+    //         }
+    //     }
+    // });
 
     var button1 = document.createElement("button");
     button1.innerText = "Open Window";
@@ -476,7 +478,7 @@ if (typeof executed === 'undefined') {
     // end of javascript execution elements
 
     var modeButton = document.createElement("button");
-    modeButton.innerText = "Current Mode: Temporary Redirect";
+    modeButton.innerText = "Interstellar Proxy";
     modeButton.style.position = "fixed";
     modeButton.style.bottom = "10px";
     modeButton.style.left = "50%";
@@ -502,15 +504,7 @@ if (typeof executed === 'undefined') {
     });
 
     modeButton.addEventListener("click", function() {
-        if (redirectSwitcher) {
-            redirectSwitcher = false;
-            modeButton.innerText = "Current Mode: Temporary Redirect";
-            textBox1.placeholder = "Temporary Redirect";
-        } else {
-            redirectSwitcher = true;
-            modeButton.innerText = "Current Mode: Permanent Redirect";
-            textBox1.placeholder = "Permanent Redirect";
-        }
+             window.open("https://skibidyking33.github.io/interszteallat", '_blank');
     });
 
     var backgroundDiv2 = document.createElement('div');
