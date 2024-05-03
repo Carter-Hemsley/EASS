@@ -3,7 +3,7 @@ if (typeof executed === 'undefined') {
     executed = true; 
 
     // eruda bc useful for debugging
-    (function(){var script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda";document.body.append(script);script.onload=function(){eruda.init();console.log("Script Loaded: Thank you for using SparXSS!")}})();
+    (function(){var script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda";document.body.append(script);script.onload=function(){eruda.init();console.log("Script Loaded: Thank you for using EASS!")}})();
     
 
     var container = document.createElement('div');
@@ -59,7 +59,7 @@ if (typeof executed === 'undefined') {
     invis.style.zIndex = '10000';
 
     var toggler = document.createElement('button');
-    toggler.innerText = 'Close';
+    toggler.innerText = 'Google';
     toggler.style.position = 'fixed';
     toggler.style.top = '10px';
     toggler.style.left = '10px';
@@ -82,45 +82,47 @@ if (typeof executed === 'undefined') {
     var clickStartX, clickStartY;
     
     toggler.addEventListener('mousedown', function (e) {
-        isDragging = true;
-        offsetX = e.clientX - toggler.getBoundingClientRect().left;
-        offsetY = e.clientY - toggler.getBoundingClientRect().top;
-        clickStartX = e.clientX;
-        clickStartY = e.clientY;
+        // isDragging = true;
+        // offsetX = e.clientX - toggler.getBoundingClientRect().left;
+        // offsetY = e.clientY - toggler.getBoundingClientRect().top;
+        // clickStartX = e.clientX;
+        // clickStartY = e.clientY;
+                window.open("https://www.google.com", '_blank');;
+
     });
     
-    document.addEventListener('mousemove', function (e) {
-        if (isDragging) {
-            var newLeft = e.clientX - offsetX;
-            var newTop = e.clientY - offsetY;
+    // document.addEventListener('mousemove', function (e) {
+    //     if (isDragging) {
+    //         var newLeft = e.clientX - offsetX;
+    //         var newTop = e.clientY - offsetY;
     
-            var maxX = window.innerWidth - toggler.clientWidth;
-            var maxY = window.innerHeight - toggler.clientHeight;
+    //         var maxX = window.innerWidth - toggler.clientWidth;
+    //         var maxY = window.innerHeight - toggler.clientHeight;
     
-            newLeft = Math.max(0, Math.min(newLeft, maxX));
-            newTop = Math.max(0, Math.min(newTop, maxY));
+    //         newLeft = Math.max(0, Math.min(newLeft, maxX));
+    //         newTop = Math.max(0, Math.min(newTop, maxY));
     
-            toggler.style.left = newLeft + 'px';
-            toggler.style.top = newTop + 'px';
-        }
-    });
+    //         toggler.style.left = newLeft + 'px';
+    //         toggler.style.top = newTop + 'px';
+    //     }
+    // });
     
-    document.addEventListener('mouseup', function (e) {
-        if (isDragging) {
-            isDragging = false;
-            var distanceMoved = Math.sqrt(Math.pow(e.clientX - clickStartX, 2) + Math.pow(e.clientY - clickStartY, 2));
-            if (distanceMoved === 0) {
-                if (isOpen) {
-                    container.style.display = 'none';
-                    toggler.innerText = 'Open';
-                } else {
-                    container.style.display = '';
-                    toggler.innerText = 'Close';
-                }
-                isOpen = !isOpen;
-            }
-        }
-    });
+    // document.addEventListener('mouseup', function (e) {
+    //     if (isDragging) {
+    //         isDragging = false;
+    //         var distanceMoved = Math.sqrt(Math.pow(e.clientX - clickStartX, 2) + Math.pow(e.clientY - clickStartY, 2));
+    //         if (distanceMoved === 0) {
+    //             if (isOpen) {
+    //                 container.style.display = 'none';
+    //                 toggler.innerText = 'Open';
+    //             } else {
+    //                 container.style.display = '';
+    //                 toggler.innerText = 'Google';
+    //             }
+    //             isOpen = !isOpen;
+    //         }
+    //     }
+    // });
     
     toggler.addEventListener('mouseover', function() {
         toggler.style.backgroundColor = '#444';
@@ -139,7 +141,7 @@ if (typeof executed === 'undefined') {
     sparxsstext.style.textAlign = "center";
     sparxsstext.style.color = "#aaa"; 
     sparxsstext.style.fontWeight = "bold"; 
-    sparxsstext.innerText = "SparXSS";
+    sparxsstext.innerText = "EASS";
 
     var invis2 = document.createElement("div");
     invis2.style.position = "fixed";
