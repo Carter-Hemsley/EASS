@@ -58,6 +58,8 @@ if (typeof executed === 'undefined') {
     invis.style.backgroundColor = 'transparent';
     invis.style.zIndex = '10000';
 
+
+                //google
     var toggler = document.createElement('button');
     toggler.innerText = 'Google';
     toggler.style.position = 'fixed';
@@ -75,12 +77,6 @@ if (typeof executed === 'undefined') {
     toggler.style.cursor = 'pointer';
     toggler.style.outline = 'none';
 
-    // yes you can drag the toggler
-    var isOpen = true;
-    var isDragging = false;
-    var offsetX, offsetY;
-    var clickStartX, clickStartY;
-    
     toggler.addEventListener('mousedown', function (e) {
         // isDragging = true;
         // offsetX = e.clientX - toggler.getBoundingClientRect().left;
@@ -90,7 +86,69 @@ if (typeof executed === 'undefined') {
                 window.open("https://www.google.com", '_blank');;
 
     });
+
+            toggler.addEventListener('mouseover', function() {
+        toggler.style.backgroundColor = '#444';
+    });
     
+    toggler.addEventListener('mouseout', function() {
+        toggler.style.backgroundColor = '#333';
+    });
+
+
+
+
+
+//interstellar
+    var interstellar = document.createElement('button');
+    interstellar.innerText = 'Google';
+    interstellar.style.position = 'fixed';
+    interstellar.style.top = '10px';
+    interstellar.style.left = '10px';
+    interstellar.style.width = '100px';
+    interstellar.style.backgroundColor = '#333';
+    interstellar.style.border = 'none';
+    interstellar.style.padding = '10px 10px';
+    interstellar.style.fontSize = '20px';
+    interstellar.style.borderRadius = '10px';
+    interstellar.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
+    interstellar.style.transition = 'background-color 0.3s ease';
+    interstellar.style.color = '#aaa';
+    interstellar.style.cursor = 'pointer';
+    interstellar.style.outline = 'none';
+
+    interstellar.addEventListener('mousedown', function (e) {
+        // isDragging = true;
+        // offsetX = e.clientX - toggler.getBoundingClientRect().left;
+        // offsetY = e.clientY - toggler.getBoundingClientRect().top;
+        // clickStartX = e.clientX;
+        // clickStartY = e.clientY;
+                window.open("https://www.google.com", '_blank');;
+
+    });
+
+            interstellar.addEventListener('mouseover', function() {
+        interstellar.style.backgroundColor = '#444';
+    });
+    
+    toggler.addEventListener('mouseout', function() {
+        interstellar.style.backgroundColor = '#333';
+    });
+
+
+
+
+
+
+                
+                
+    // // yes you can drag the toggler
+    // var isOpen = true;
+    // var isDragging = false;
+    // var offsetX, offsetY;
+    // var clickStartX, clickStartY;
+
+                
     // document.addEventListener('mousemove', function (e) {
     //     if (isDragging) {
     //         var newLeft = e.clientX - offsetX;
@@ -124,13 +182,7 @@ if (typeof executed === 'undefined') {
     //     }
     // });
     
-    toggler.addEventListener('mouseover', function() {
-        toggler.style.backgroundColor = '#444';
-    });
-    
-    toggler.addEventListener('mouseout', function() {
-        toggler.style.backgroundColor = '#333';
-    });
+
     
     var sparxsstext = document.createElement("div");
     sparxsstext.style.position = "fixed";
